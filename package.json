@@ -7,9 +7,9 @@
     "serve": "vite preview"
   },
   "devDependencies": {
-    "vite": "^2.6.4"
+    "vite": "2.6.14"
   },
   "dependencies": {
-    "three": "^0.135.0"
+    "three": "0.135.0"
   }
 }
