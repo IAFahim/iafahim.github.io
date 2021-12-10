@@ -1,15 +1,18 @@
 import * as THREE from 'https://cdn.skypack.dev/three';
 // import * as THREE from 'three';
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'three/examples//jsm/geometries/TextGeometry.js';
 
 class Webgl {
+    static defaultFont;
+
     constructor() {
         this.camera = this.newCamera();
         this.scene = this.newScene();
         this.renderer = this.newRenderer();
         this.canvas = this.newCanvas();
         this.addStartingListener();
-
         this.start();
     }
 
@@ -51,7 +54,39 @@ class Webgl {
         });
     }
 
+    fontLoader(){
+        const loader = new FontLoader();
+        this.font=loader.parse('fonts/gentilis_regular.typeface.json');
+        localStorage.setItem('offlineFont',JSON.stringify(this.font));
+        let temp=localStorage.getItem('offlineFont');
+        if(temp){
+            let data=JSON.parse(temp);
+            console.log(this.font)
+            console.log(data);
+        }
+    }
+
+    // addLabel( name, location ) {
+    //
+    //     const textGeo = new TextGeometry( name, {
+    //
+    //         font: font,
+    //
+    //         size: 20,
+    //         height: 1,
+    //         curveSegments: 1
+    //
+    //     } );
+    //
+    //     const textMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+    //     const textMesh = new THREE.Mesh( textGeo, textMaterial );
+    //     textMesh.position.copy( location );
+    //     scene.add( textMesh );
+    //
+    // }
+
     start() {
+        this.fontLoader();
         let geometry=new THREE.PlaneGeometry();
         let material=new THREE.MeshBasicMaterial({side:THREE.DoubleSide});
         let mesh=new THREE.Mesh(geometry, material);
