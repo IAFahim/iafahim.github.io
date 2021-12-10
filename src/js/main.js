@@ -1,7 +1,6 @@
-import * as THREE from 'https://cdn.skypack.dev/three';
-// import * as THREE from 'three';
+import * as THREE from 'three';
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
+// import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
 import { TextGeometry } from 'three/examples//jsm/geometries/TextGeometry.js';
 
 class Webgl {
@@ -54,17 +53,17 @@ class Webgl {
         });
     }
 
-    fontLoader(){
-        const loader = new FontLoader();
-        this.font=loader.parse('fonts/gentilis_regular.typeface.json');
-        localStorage.setItem('offlineFont',JSON.stringify(this.font));
-        let temp=localStorage.getItem('offlineFont');
-        if(temp){
-            let data=JSON.parse(temp);
-            console.log(this.font)
-            console.log(data);
-        }
-    }
+    // fontLoader(){
+    //     const loader = new FontLoader();
+    //     this.font=loader.parse('fonts/gentilis_regular.typeface.json');
+    //     localStorage.setItem('offlineFont',JSON.stringify(this.font));
+    //     let temp=localStorage.getItem('offlineFont');
+    //     if(temp){
+    //         let data=JSON.parse(temp);
+    //         console.log(this.font)
+    //         console.log(data);
+    //     }
+    // }
 
     // addLabel( name, location ) {
     //
