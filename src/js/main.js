@@ -2,7 +2,7 @@ import * as THREE from 'https://cdn.skypack.dev/three';
 // import * as THREE from 'three';
 import {OrbitControls} from "https://cdn.skypack.dev/three/example/jsm/controls/OrbitControls.js";
 import { FontLoader } from 'https://cdn.skypack.dev/three/examples/jsm/loaders/FontLoader.js';
-import { TextGeometry } from 'https://cdn.skypack.dev/three/examples//jsm/geometries/TextGeometry.js';
+import { TextGeometry } from 'https://cdn.skypack.dev/three/examples/jsm/geometries/TextGeometry.js';
 
 class Webgl {
     static defaultFont;
