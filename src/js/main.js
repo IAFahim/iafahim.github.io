@@ -1,8 +1,6 @@
 import * as THREE from 'https://cdn.skypack.dev/three';
 // import * as THREE from 'three';
-import {OrbitControls} from "https://cdn.skypack.dev/three/example/jsm/controls/OrbitControls.js";
-import { FontLoader } from 'https://cdn.skypack.dev/three/examples/jsm/loaders/FontLoader.js';
-import { TextGeometry } from 'https://cdn.skypack.dev/three/examples/jsm/geometries/TextGeometry.js';
+import { OrbitControls } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/controls/OrbitControls.js";
 
 class Webgl {
     static defaultFont;
@@ -54,17 +52,17 @@ class Webgl {
         });
     }
 
-    fontLoader(){
-        const loader = new FontLoader();
-        this.font=loader.parse('fonts/gentilis_regular.typeface.json');
-        localStorage.setItem('offlineFont',JSON.stringify(this.font));
-        let temp=localStorage.getItem('offlineFont');
-        if(temp){
-            let data=JSON.parse(temp);
-            console.log(this.font)
-            console.log(data);
-        }
-    }
+    // fontLoader(){
+    //     const loader = new FontLoader();
+    //     this.font=loader.parse('fonts/gentilis_regular.typeface.json');
+    //     localStorage.setItem('offlineFont',JSON.stringify(this.font));
+    //     let temp=localStorage.getItem('offlineFont');
+    //     if(temp){
+    //         let data=JSON.parse(temp);
+    //         console.log(this.font)
+    //         console.log(data);
+    //     }
+    // }
 
     // addLabel( name, location ) {
     //
@@ -86,7 +84,7 @@ class Webgl {
     // }
 
     start() {
-        this.fontLoader();
+        // this.fontLoader();
         let geometry=new THREE.PlaneGeometry();
         let material=new THREE.MeshBasicMaterial({side:THREE.DoubleSide});
         let mesh=new THREE.Mesh(geometry, material);
