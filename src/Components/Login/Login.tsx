@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import { supabase } from '../../SupaBase/SupabseUni'
+import {useState} from 'react'
+import {supabase} from '../../SupaBase/SupabseUni'
+import ShowData from "./ShowData/ShowData";
 
 export default function Auth() {
     const [loading, setLoading] = useState(false)
     const [email, setEmail] = useState('')
 
-    const handleLogin = async (e:any) => {
+
+    const handleLogin = async (e: any) => {
         e.preventDefault()
 
         try {
             setLoading(true)
-            const { error } = await supabase.auth.signIn({ email })
+            const {error} = await supabase.auth.signIn({email})
             if (error) throw error
             alert('Check your email for the login link!')
         } catch (error) {
@@ -20,6 +22,8 @@ export default function Auth() {
             setLoading(false)
         }
     }
+
+
 
     return (
         <div className="row flex flex-center">
@@ -45,6 +49,7 @@ export default function Auth() {
                     </form>
                 )}
             </div>
+            <ShowData/>
         </div>
     )
 }
