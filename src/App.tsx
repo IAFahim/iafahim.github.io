@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import './App.css';
 import AppShellMantine from "./Components/AppShell/AppShellMantine";
 import {
     NavigationProgress,

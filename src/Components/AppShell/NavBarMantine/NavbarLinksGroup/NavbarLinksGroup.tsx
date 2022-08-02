@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import { Group, Box, Collapse, ThemeIcon, Text, UnstyledButton, createStyles } from '@mantine/core';
-import { Icon as TablerIcon , ChevronLeft, ChevronRight } from 'tabler-icons-react';
+import React, {useState} from 'react';
+import {Group, Box, Collapse, ThemeIcon, Text, UnstyledButton, createStyles} from '@mantine/core';
+import {Icon as TablerIcon, ChevronLeft, ChevronRight} from 'tabler-icons-react';
+import {NavLink, To} from "react-router-dom";
+import {Path} from "history";
 
 const useStyles = createStyles((theme) => ({
     control: {
@@ -45,47 +47,50 @@ interface LinksGroupProps {
     icon: TablerIcon;
     label: string;
     initiallyOpened?: boolean;
-    links?: { label: string; link: string }[];
+    link?: string,
+    links?: {
+        label: string; link: string
+    }[];
 }
 
-export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksGroupProps) {
-    const { classes, theme } = useStyles();
+export function LinksGroup({icon: Icon, label, initiallyOpened, links, link}: LinksGroupProps) {
+    const {classes, theme} = useStyles();
     const hasLinks = Array.isArray(links);
     const [opened, setOpened] = useState(initiallyOpened || false);
     const ChevronIcon = theme.dir === 'ltr' ? ChevronRight : ChevronLeft;
     const items = (hasLinks ? links : []).map((link) => (
-        <Text<'a'>
-            component="a"
-            className={classes.link}
-            href={link.link}
-            key={link.label}
-            onClick={(event) => event.preventDefault()}
-        >
-            {link.label}
-        </Text>
+        <NavLink style={{textDecoration: 'none'}} to={link.link + ""}>
+            <Text className={classes.link}
+            >
+                {link.label}
+            </Text>
+        </NavLink>
     ));
 
     return (
         <>
-            <UnstyledButton onClick={() => setOpened((o) => !o)} className={classes.control}>
-                <Group position="apart" spacing={0}>
-                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <ThemeIcon variant="light" size={30}>
-                            <Icon size={18} />
-                        </ThemeIcon>
-                        <Box ml="md">{label}</Box>
-                    </Box>
-                    {hasLinks && (
-                        <ChevronIcon
-                            className={classes.chevron}
-                            size={14}
-                            style={{
-                                transform: opened ? `rotate(${theme.dir === 'rtl' ? -90 : 90}deg)` : 'none',
-                            }}
-                        />
-                    )}
-                </Group>
-            </UnstyledButton>
+            <NavLink style={{textDecoration: 'none'}} to={link+''}>
+                <UnstyledButton onClick={() => setOpened((o) => !o)} className={classes.control}>
+                    <Group position="apart" spacing={0}>
+                        <Box sx={{display: 'flex', alignItems: 'center'}}>
+                            <ThemeIcon variant="light" size={30}>
+                                <Icon size={18}/>
+                            </ThemeIcon>
+                            <Text
+                                ml="md">{label}</Text>
+                        </Box>
+                        {hasLinks && (
+                            <ChevronIcon
+                                className={classes.chevron}
+                                size={14}
+                                style={{
+                                    transform: opened ? `rotate(${theme.dir === 'rtl' ? -90 : 90}deg)` : 'none',
+                                }}
+                            />
+                        )}
+                    </Group>
+                </UnstyledButton>
+            </NavLink>
             {hasLinks ? <Collapse in={opened}>{items}</Collapse> : null}
         </>
     );

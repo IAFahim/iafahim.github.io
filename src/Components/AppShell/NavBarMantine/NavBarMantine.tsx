@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar, Button, ScrollArea, createStyles } from "@mantine/core";
+import {Navbar, Button, ScrollArea, createStyles} from "@mantine/core";
 import UserFooter from "./UserFooter/UserFooter";
 import ButtonsForNav from "./ButtonsForNav.tsx/ButtonsForNav";
 import {Clubs, Friends, Home, Icon as TablerIcon, School, Subtask} from 'tabler-icons-react';
@@ -16,45 +16,49 @@ import {
 import {LinksGroup} from "./NavbarLinksGroup/NavbarLinksGroup";
 
 const mockdata = [
-    { label: 'Home', icon: Home },
+    {label: 'Home', icon: Home, link: ''},
     {
         label: 'Universities',
         icon: School,
+        link: "universities",
         links: [
-            { label: 'My University', link: '/' },
-            { label: 'All Universities', link: '/' },
-            { label: 'University Announcement', link: '/' },
-            { label: "Join University", link: '/' },
+            {label: 'My University', link: '/'},
+            {label: 'All Universities', link: '/'},
+            {label: 'University Announcement', link: '/'},
+            {label: "Join University", link: '/'},
         ],
     },
     {
         label: 'Clubs',
         icon: Clubs,
+        link: '/clubs',
         links: [
-            { label: 'Joined', link: '/' },
-            { label: 'Join Club', link: '/' },
-            { label: 'Browse Clubs', link: '/' },
+            {label: 'Joined', link: '/'},
+            {label: 'Join Club', link: '/'},
+            {label: 'Browse Clubs', link: '/brows-clubs'},
         ],
     },
     {
         label: 'Task',
         icon: Subtask,
+        link: '/task',
         links: [
-            { label: 'Current Task', link: '/' },
-            { label: 'Upcoming Task', link: '/' },
-            { label: 'Releases Task', link: '/' },
-            { label: 'Task History', link: '/' },
+            {label: 'Current Task', link: '/'},
+            {label: 'Upcoming Task', link: '/'},
+            {label: 'Releases Task', link: '/'},
+            {label: 'Task History', link: '/'},
         ],
     },
-    { label: 'Friends', icon: Friends },
-    { label: 'Achievement', icon: PresentationAnalytics },
+    {label: 'Friends', icon: Friends, link: '/friends'},
+    {label: 'Achievement', icon: PresentationAnalytics, link: '/achievement'},
     {
         label: 'Settings',
         icon: Adjustments,
+        link: '/settings',
         links: [
-            { label: 'Enable 2FA', link: '/' },
-            { label: 'Change password', link: '/' },
-            { label: 'Recovery codes', link: '/' },
+            {label: 'Enable 2FA', link: '/'},
+            {label: 'Change password', link: '/'},
+            {label: 'Recovery codes', link: '/'},
         ],
     },
 ];
@@ -86,15 +90,15 @@ const useStyles = createStyles((theme) => ({
 
 
 function NavBarMantine(props: any) {
-    const { classes } = useStyles();
-    const links = mockdata.map((item) => <LinksGroup {...item} key={item.label} />);
+    const {classes} = useStyles();
+    const links = mockdata.map((item) => <LinksGroup {...item} key={item.label}/>);
 
     return (
         <Navbar
-             hiddenBreakpoint={props.navbarBreakPoint} hidden={!props.opened}
+            hiddenBreakpoint={props.navbarBreakPoint} hidden={!props.opened}
             width={{sm: 250, md: 275, lg: 300, base: 240}}
             style={{background: "#ffffff"}}>
-            <Navbar.Section grow component={ScrollArea} >{
+            <Navbar.Section grow component={ScrollArea}>{
                 <div className={classes.linksInner}>{links}</div>
             }
             </Navbar.Section>

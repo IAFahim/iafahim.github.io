@@ -41,8 +41,6 @@ function UserFooter(props: any) {
                             fahimmanowarj5@gmail.com
                         </Text>
                     </Box>
-
-                    {props.theme.dir === 'ltr' ? <ChevronRight size={18}/> : <ChevronLeft size={18}/>}
                 </Group>
             </UnstyledButton>
         </Box>
