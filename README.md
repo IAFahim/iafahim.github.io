@@ -5,8 +5,8 @@ University club organizer, Mainly being developed for NSU-ACMSC with plan to exp
 
 Website:
 [Design](https://www.figma.com/file/7isU2sHhQba2kTcE3Qvm6F/Untitled?node-id=0%3A1),
-[Deployment](https://iafahim.github.io/uni),
-[Development](https://github.com/IAFahim/uni),
+[Deployment](https://iafahim.github.io),
+[Development](https://github.com/IAFahim),
 [Project track](https://github.com/users/IAFahim/projects/2)
 
 
