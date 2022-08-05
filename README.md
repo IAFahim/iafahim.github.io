@@ -6,7 +6,7 @@ University club organizer, Mainly being developed for NSU-ACMSC with plan to exp
 Website:
 [Design](https://www.figma.com/file/7isU2sHhQba2kTcE3Qvm6F/Untitled?node-id=0%3A1),
 [Deployment](https://iafahim.github.io),
-[Development](https://github.com/IAFahim),
+[Development](https://github.com/IAFahim/iafahim.github.io),
 [Project track](https://github.com/users/IAFahim/projects/2)
 
 
@@ -22,7 +22,7 @@ Website:
 - View which clubs you are connected
 - See available in each University
 - Apply for club
-- Find others who are in the the club
+- Find others who are in the club
 - Connect with others
 - Manage or From clubs
 - Create Teams
@@ -30,6 +30,7 @@ Website:
 - Handle new Applications
 - Automation of redudent task
 - Get access to Api to access data
+
 
 ## Deployment
 
@@ -43,6 +44,7 @@ To deploy this project on GitHub run
 ## Authors
 
 - [IAFahim](https://www.github.com/octokatherine) Md. Ishtiaq Ahamed Fahim 2012518642
+
 
 
 ## Contributing
