@@ -11,7 +11,7 @@ export default function Universities() {
     }
 
     const getUniversityList = async (country: string) => {
-        fetch("https://raw.githubusercontent.com/IAFahim/iafahim.github.io/master/src/Pages/University/" + country.toLowerCase() + ".json").then(e => {
+        fetch("https://raw.githubusercontent.com/IAFahim/iafahim.github.io/master/public-university-data/" + country.toLowerCase() + ".json").then(e => {
             e.json().then(data=>
                 console.log(data)
             )
