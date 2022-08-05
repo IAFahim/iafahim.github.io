@@ -23,6 +23,7 @@ const useStyles = createStyles((theme) => ({
         justifyContent: 'start',
         paddingTop: theme.spacing.xl,
         paddingBottom: theme.spacing.xl,
+        backgroundColor: theme.colors.gray[0]
     },
 
     content: {
@@ -53,6 +54,7 @@ const useStyles = createStyles((theme) => ({
     image: {
         flex: 1,
         maxWidth: 200,
+        maxHeight: 200,
         [theme.fn.smallerThan('md')]: {},
     },
 
@@ -72,7 +74,7 @@ export default function Clubs() {
         <div>
             <Card>
                 <div className={classes.inner}>
-                    <Image src={image} className={classes.image}/>
+                    <Image src={image} withPlaceholder className={classes.image} fit={"contain"}/>
                     <div className={classes.content}>
                         <Title className={classes.title}>
                             {clubData.name}

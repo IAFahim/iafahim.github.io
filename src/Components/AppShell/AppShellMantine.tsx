@@ -24,7 +24,7 @@ export default function AppShellMantine() {
         <AppShell
             className="App"
             padding={0}
-            styles={{main: {background: "#f8f9fa"}}}
+            styles={{main: {background: "#ffffff"}}}
             navbarOffsetBreakpoint={navbarBreakPoint}
             fixed navbar={
             <NavBarMantine opened={opened} navbarBreakPoint={navbarBreakPoint} theme={theme} text={"Lazy to dev..."}/>
