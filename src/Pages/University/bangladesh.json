@@ -1,0 +1,533 @@
+[{
+  "web_pages": ["http://www.aiub.edu/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["aiub.edu"],
+  "country": "Bangladesh",
+  "name": "American International University - Bangladesh"
+}, {
+  "web_pages": ["http://www.asaub.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["asaub.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Asa University Bangladesh"
+}, {
+  "web_pages": ["http://www.atishdipankaruniversity.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["atishdipankaruniversity.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Atish Dipankar University"
+}, {
+  "web_pages": ["http://www.aub-bd.org/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["aub-bd.org"],
+  "country": "Bangladesh",
+  "name": "Asian University of Bangladesh"
+}, {
+  "web_pages": ["http://www.aust.edu/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["aust.edu"],
+  "country": "Bangladesh",
+  "name": "Ahsanullah University of Science & Technology"
+}, {
+  "web_pages": ["http://www.bau.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["bau.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Bangladesh Agricultural University"
+}, {
+  "web_pages": ["http://www.bgctrustbd.org/btub/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["bgctrustbd.org"],
+  "country": "Bangladesh",
+  "name": "BGC Trust University, Bangladesh"
+}, {
+  "web_pages": ["http://www.bou.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["bou.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Bangladesh Open University"
+}, {
+  "web_pages": ["http://www.bracuniversity.net/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["bracuniversity.net"],
+  "country": "Bangladesh",
+  "name": "Brac University"
+}, {
+  "web_pages": ["http://www.brur.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["brur.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Begum Rokeya University, Rangpur"
+}, {
+  "web_pages": ["http://www.bsmmu.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["bsmmu.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Bangabandhu Sheikh Mujibur Rahman Medical University"
+}, {
+  "web_pages": ["http://www.bsmrau.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["bsmrau.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Bangabandhu Sheikh Mujibur Rahman Agricultural University"
+}, {
+  "web_pages": ["http://www.bubt.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["bubt.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Bangladesh University of Business & Technology"
+}, {
+  "web_pages": ["http://www.bu.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["bu.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Bangladesh University"
+}, {
+  "web_pages": ["http://www.buet.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["buet.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Bangladesh University of Engineering and Technology"
+}, {
+  "web_pages": ["http://www.bup.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["bup.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Bangladesh University of Professionals"
+}, {
+  "web_pages": ["http://www.butex.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["butex.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Bangladesh University of Textiles"
+}, {
+  "web_pages": ["http://www.cityuniversity.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["cityuniversity.edu.bd"],
+  "country": "Bangladesh",
+  "name": "City University"
+}, {
+  "web_pages": ["http://www.cou.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["cou.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Comilla University"
+}, {
+  "web_pages": ["http://www.cu.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["cu.ac.bd"],
+  "country": "Bangladesh",
+  "name": "University of Chittagong"
+}, {
+  "web_pages": ["http://www.cuet.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["cuet.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Chittagong University of Engineering and Technology"
+}, {
+  "web_pages": ["http://www.daffodilvarsity.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["daffodilvarsity.edu.bd", "diu.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Daffodil International University"
+}, {
+  "web_pages": ["http://www.diu.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["diu.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Darul Ihsan University"
+}, {
+  "web_pages": ["http://www.diu.net.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["diu.net.bd"],
+  "country": "Bangladesh",
+  "name": "Dhaka International University"
+}, {
+  "web_pages": ["http://www.du.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["du.ac.bd"],
+  "country": "Bangladesh",
+  "name": "University of Dhaka"
+}, {
+  "web_pages": ["http://www.duet.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["duet.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Dhaka University of Engineering and Technology"
+}, {
+  "web_pages": ["http://www.eastdelta.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["eastdelta.edu.bd"],
+  "country": "Bangladesh",
+  "name": "East Delta University"
+}, {
+  "web_pages": ["http://www.easternuni.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["easternuni.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Eastern University"
+}, {
+  "web_pages": ["http://www.ewubd.edu/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["ewubd.edu"],
+  "country": "Bangladesh",
+  "name": "East West University"
+}, {
+  "web_pages": ["http://www.ewubd.edu/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["ewubd.edu"],
+  "country": "Bangladesh",
+  "name": "East-West University, Mohakhali"
+}, {
+  "web_pages": ["http://www.green.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["green.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Green University of Bangladesh"
+}, {
+  "web_pages": ["http://www.hstu.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["hstu.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Hajee Mohammad Danesh Science and Technology University"
+}, {
+  "web_pages": ["http://www.ibaisuniv.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["ibaisuniv.edu.bd"],
+  "country": "Bangladesh",
+  "name": "IBAIS University"
+}, {
+  "web_pages": ["http://www.icu-edu.org/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["icu-edu.org"],
+  "country": "Bangladesh",
+  "name": "International Culture University"
+}, {
+  "web_pages": ["http://www.iiuc.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["iiuc.ac.bd"],
+  "country": "Bangladesh",
+  "name": "International Islamic University Chittagong"
+}, {
+  "web_pages": ["http://www.iu.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["iu.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Islamic University Kushtia"
+}, {
+  "web_pages": ["http://www.iubat.edu/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["iubat.edu"],
+  "country": "Bangladesh",
+  "name": "International University of Business Agriculture and Technology"
+}, {
+  "web_pages": ["http://www.iub.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["iub.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Independent University, Bangladesh"
+}, {
+  "web_pages": ["http://www.iutoic-dhaka.edu/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["iutoic-dhaka.edu"],
+  "country": "Bangladesh",
+  "name": "Islamic University of Technology"
+}, {
+  "web_pages": ["http://www.jkkniu.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["jkkniu.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Jatiya Kabi Kazi Nazrul Islam University"
+}, {
+  "web_pages": ["http://www.jnu.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["jnu.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Jagannath University"
+}, {
+  "web_pages": ["http://www.juniv.edu/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["juniv.edu"],
+  "country": "Bangladesh",
+  "name": "Jahangirnagar University"
+}, {
+  "web_pages": ["http://www.ku.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["ku.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Khulna University"
+}, {
+  "web_pages": ["http://www.kuet.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["kuet.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Khulna University of Engineering And Technology"
+}, {
+  "web_pages": ["http://www.lus.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["lus.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Leading University"
+}, {
+  "web_pages": ["http://www.manarat.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["manarat.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Manarat International University"
+}, {
+  "web_pages": ["http://www.mbstu.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["mbstu.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Mawlana Bhashani Science And Technology University"
+}, {
+  "web_pages": ["http://www.metrouni.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["metrouni.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Metropolitan University"
+}, {
+  "web_pages": ["http://www.mist.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["mist.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Military Institute of Science and Technology"
+}, {
+  "web_pages": ["http://www.neub.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["neub.edu.bd"],
+  "country": "Bangladesh",
+  "name": "North East University Bangladesh"
+}, {
+  "web_pages": ["http://www.northsouth.edu/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["northsouth.edu"],
+  "country": "Bangladesh",
+  "name": "North South University"
+}, {
+  "web_pages": ["http://www.nstu.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["nstu.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Noakhali University of Science and Technology"
+}, {
+  "web_pages": ["http://www.nub.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["nub.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Northern University Bangladesh"
+}, {
+  "web_pages": ["http://www.nu.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["nu.edu.bd"],
+  "country": "Bangladesh",
+  "name": "National University"
+}, {
+  "web_pages": ["http://www.presidency.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["presidency.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Presidency University"
+}, {
+  "web_pages": ["http://www.pstu.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["pstu.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Patuakhali Science and Technology University"
+}, {
+  "web_pages": ["http://www.pub.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["pub.ac.bd"],
+  "country": "Bangladesh",
+  "name": "People's University of Bangladesh"
+}, {
+  "web_pages": ["http://www.puc.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["puc.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Premier University"
+}, {
+  "web_pages": ["http://www.pust.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["pust.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Pabna University of Science and Technology"
+}, {
+  "web_pages": ["http://www.queensuniversity.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["queensuniversity.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Queens University"
+}, {
+  "web_pages": ["http://www.ru.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["ru.ac.bd"],
+  "country": "Bangladesh",
+  "name": "University of Rajshahi"
+}, {
+  "web_pages": ["http://www.ruet.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["ruet.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Rajshahi University of Engineering and Technology"
+}, {
+  "web_pages": ["http://www.sau.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["sau.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Sylhet Agricultural University"
+}, {
+  "web_pages": ["http://www.sec.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["sec.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Sylhet Engineering College"
+}, {
+  "web_pages": ["http://www.seu.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["seu.ac.bd"],
+  "country": "Bangladesh",
+  "name": "Southeast University"
+}, {
+  "web_pages": ["http://www.siu.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["siu.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Sylhet International University"
+}, {
+  "web_pages": ["http://www.southern.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["southern.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Southern University Bangladesh"
+}, {
+  "web_pages": ["http://www.stamforduniversity.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["stamforduniversity.edu.bd"],
+  "country": "Bangladesh",
+  "name": "Stamford University"
+}, {
+  "web_pages": ["http://www.sust.edu/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["sust.edu"],
+  "country": "Bangladesh",
+  "name": "Shahjalal University of Science and Technology"
+}, {
+  "web_pages": ["http://www.uap-bd.edu/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["uap-bd.edu"],
+  "country": "Bangladesh",
+  "name": "University of Asia Pacific, Dhanmondi"
+}, {
+  "web_pages": ["http://www.uits.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["uits.edu.bd"],
+  "country": "Bangladesh",
+  "name": "University of Information Technology & Sciences"
+}, {
+  "web_pages": ["http://www.uiu.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["uiu.ac.bd"],
+  "country": "Bangladesh",
+  "name": "United International University"
+}, {
+  "web_pages": ["http://www.ulab.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["ulab.edu.bd"],
+  "country": "Bangladesh",
+  "name": "University of Liberal Arts"
+}, {
+  "web_pages": ["http://www.uoda.edu.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["uoda.edu.bd"],
+  "country": "Bangladesh",
+  "name": "University of Development Alternative"
+}, {
+  "web_pages": ["http://www.ustc.ac.bd/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["ustc.ac.bd"],
+  "country": "Bangladesh",
+  "name": "University of Science & Technology Chittagong"
+}, {
+  "web_pages": ["http://www.wub.edu/"],
+  "state-province": null,
+  "alpha_two_code": "BD",
+  "domains": ["wub.edu"],
+  "country": "Bangladesh",
+  "name": "World University of Bangladesh"
+}]
