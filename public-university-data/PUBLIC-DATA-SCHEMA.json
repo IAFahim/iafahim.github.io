@@ -1,0 +1,16 @@
+{
+  "web_pages": [
+    "Link"
+  ],
+  "alpha_two_code": "Country Code",
+  "domains": [
+    "Mail Domain"
+  ],
+  "country": "Where the university is located",
+  "name": "Name of University",
+  "logo-url": "Url of University logo",
+  "address": "Physical Address",
+  "lat-lon": "23.815422,90.426076",
+  "mail": "Contact mail",
+  "phone": "Contact number"
+}
