@@ -6,11 +6,13 @@ import {
 } from '@mantine/core';
 import NavBarMantine from "./NavBarMantine/NavBarMantine";
 import HeaderMantine from "./HeaderMantine/HeaderMantine";
-import Clubs from "../Clubs/Clubs";
+import Clubs from "../../Pages/Clubs/Clubs";
 import {NavigationProgress} from "@mantine/nprogress";
 import { Route, Routes } from "react-router-dom";
-import Home from "../Home/Home";
+import Home from "../../Pages/Home/Home";
 import Page404 from "../../Pages/Page404/Page404";
+import Tasks from "../../Pages/Tasks/Tasks";
+import Universities from "../../Pages/University/Universities/Universities";
 
 export default function AppShellMantine() {
     const theme = useMantineTheme();
@@ -33,8 +35,9 @@ export default function AppShellMantine() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="clubs" element={<Clubs />} />
-                <Route path="task" element={<Clubs />} />
-                <Route path="universities" element={<Page404 text={'Universities'}/>} />
+
+                <Route path="task" element={<Tasks/>} />
+                <Route path="universities" element={<Universities/>} />
                 <Route path="friends" element={<Page404 text={'Friends'}/>} />
                 <Route path="achievement" element={<Page404 text={'Achievement'} />} />
                 <Route path="settings" element={<Page404 text={'Settings'} />} />

@@ -7,24 +7,27 @@ import {
     Group,
     Text,
     List,
-    ThemeIcon,Card
+    ThemeIcon, Card
 } from '@mantine/core';
-import { Icon } from 'tabler-icons-react';
+import {Icon} from 'tabler-icons-react';
 import image from './ACM_Logo.png';
-import ClubData from "./ClubData";
 import clubData from "./ClubData";
+import {NavLink, Route} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import Tasks from "../Tasks/Tasks";
+import React from "react";
 
 const useStyles = createStyles((theme) => ({
     inner: {
         display: 'flex',
-        justifyContent:'start',
+        justifyContent: 'start',
         paddingTop: theme.spacing.xl,
         paddingBottom: theme.spacing.xl,
     },
 
     content: {
         maxWidth: 480,
-        paddingLeft:theme.spacing.xl,
+        paddingLeft: theme.spacing.xl,
         [theme.fn.smallerThan('md')]: {
             maxWidth: '100%',
         },
@@ -50,36 +53,44 @@ const useStyles = createStyles((theme) => ({
     image: {
         flex: 1,
         maxWidth: 200,
-        [theme.fn.smallerThan('md')]: {
-
-        },
+        [theme.fn.smallerThan('md')]: {},
     },
 
 }));
 
+
+function Task(props:any){
+    return(
+        <div>props.text</div>
+    );
+}
+
 export default function Clubs() {
-    const { classes } = useStyles();
+
+    const {classes} = useStyles();
     return (
         <div>
             <Card>
                 <div className={classes.inner}>
-                    <Image src={image} className={classes.image} />
+                    <Image src={image} className={classes.image}/>
                     <div className={classes.content}>
                         <Title className={classes.title}>
-                            {ClubData.name}
+                            {clubData.name}
                         </Title>
                         <Text color="dimmed" size={20}>Memeber: {clubData.user_count}</Text>
                         <Text color="dimmed" mt="md">
                             {clubData.description}
                         </Text>
-
                         <Group mt={30}>
+
                             <Button radius="xl" size="md" className={classes.control}>
-                                Support
-                            </Button>
-                            <Button variant="default" radius="xl" size="md" className={classes.control}>
                                 Apply
                             </Button>
+                            <NavLink style={{textDecoration: 'none'}} to={clubData.name+''}>
+                                <Button variant="default" radius="xl" size="md" className={classes.control}>
+                                    Manage
+                                </Button>
+                            </NavLink>
                         </Group>
 
                     </div>
