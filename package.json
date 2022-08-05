@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@mantine/core": "5.0.2",
+    "@mantine/core": "5.0.3",
     "@mantine/nprogress": "5.0.2",
     "@supabase/supabase-js": "1.35.6",
     "@testing-library/jest-dom": "5.16.5",
