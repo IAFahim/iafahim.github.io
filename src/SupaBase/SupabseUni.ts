@@ -24,6 +24,23 @@ export class User {
         this._user = user;
     }
 
+    async sendMagicLink(email: string){
+        const { error } = await supabase.auth.signIn({ email:email})
+    }
+
+    async getUser(){
+        const { data } = await supabase
+            .from('profiles')
+            .select('id, last_name')
+        // @ts-ignore
+        // this._user.name=data.username;
+        // // @ts-ignore
+        // this._user.logo_url=data.avatar_url;
+        // // @ts-ignore
+        // this._user.social_websites?.push(data.website)
+        console.log(data);
+    }
+
     get user(): user {
         return this._user;
     }
