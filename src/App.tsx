@@ -11,12 +11,12 @@ function App() {
     useEffect(() => {
         // @ts-ignore
         setSession(supabase.auth.session())
-
         supabase.auth.onAuthStateChange((_event, session) => {
             // @ts-ignore
             setSession(session)
         })
     }, [])
+
     return (
         <>
             <NavigationProgress/>

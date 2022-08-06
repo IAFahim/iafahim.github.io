@@ -33,7 +33,7 @@ export default function AppShellMantine() {
                                    navbarBreakPoint={navbarBreakPoint} height={48}/>}
         >
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home/>} />
                 <Route path="clubs" element={<Clubs />} />
 
                 <Route path="task" element={<Tasks/>} />

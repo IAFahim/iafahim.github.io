@@ -61,8 +61,8 @@ const useStyles = createStyles((theme) => ({
 }));
 
 
-function Task(props:any){
-    return(
+function Task(props: any) {
+    return (
         <div>props.text</div>
     );
 }
@@ -71,34 +71,31 @@ export default function Clubs() {
 
     const {classes} = useStyles();
     return (
-        <div>
-            <Card>
-                <div className={classes.inner}>
-                    <Image src={image} withPlaceholder className={classes.image} fit={"contain"}/>
-                    <div className={classes.content}>
-                        <Title className={classes.title}>
-                            {clubData.name}
-                        </Title>
-                        <Text color="dimmed" size={20}>Memeber: {clubData.user_count}</Text>
-                        <Text color="dimmed" mt="md">
-                            {clubData.description}
-                        </Text>
-                        <Group mt={30}>
 
-                            <Button radius="xl" size="md" className={classes.control}>
-                                Apply
-                            </Button>
-                            <NavLink style={{textDecoration: 'none'}} to={clubData.name+''}>
-                                <Button variant="default" radius="xl" size="md" className={classes.control}>
-                                    Manage
-                                </Button>
-                            </NavLink>
-                        </Group>
+        <Card className={classes.inner}>
+            <Image src={image} withPlaceholder className={classes.image} fit={"contain"}/>
+            <div className={classes.content}>
+                <Title className={classes.title}>
+                    {clubData.name}
+                </Title>
+                <Text color="dimmed" size={20}>Memeber: {clubData.user_count}</Text>
+                <Text color="dimmed" mt="md">
+                    {clubData.description}
+                </Text>
+                <Group mt={30}>
 
-                    </div>
+                    <Button radius="xl" size="md" className={classes.control}>
+                        Apply
+                    </Button>
+                    <NavLink style={{textDecoration: 'none'}} to={clubData.name + ''}>
+                        <Button variant="default" radius="xl" size="md" className={classes.control}>
+                            Manage
+                        </Button>
+                    </NavLink>
+                </Group>
 
-                </div>
-            </Card>
-        </div>
+            </div>
+
+        </Card>
     );
 }
