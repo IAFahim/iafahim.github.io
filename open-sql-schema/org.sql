@@ -1,23 +1,22 @@
 create table org
 (
-    id                   int primary key,
-    joined_student_count int         default 1,
-    logo_url             varchar(200),
+    id                   serial primary key,
     created_by           bigint references profiles (id),
+    logo_url             varchar(200),
     name                 varchar(100),
     description          varchar,
     created              timestamptz default now(),
+    joined_student_count int         default 1,
     social_websites      hstore
 );
 
 create or replace function public.handle_new_org()
     returns trigger
     language plpgsql
-    security definer set search_path = public
 as
 $$
 begin
-    insert into org_member(profiles_id, org_id, class) values (new.created_by, new.id, '"Creator"=>"0"');
+    insert into org_member(org_id, profiles_id, class) values (new.id, new.created_by, '"Creator"=>"0"');
     return new;
 end;
 $$;
@@ -31,7 +30,7 @@ EXECUTE procedure handle_new_org();
 create table org_member
 (
     profiles_id bigint primary key references profiles (id),
-    org_id      bigint references profiles (id),
+    org_id      bigint references org (id),
     class       hstore
 );
 
