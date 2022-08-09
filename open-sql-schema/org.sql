@@ -13,6 +13,7 @@ create table org
 create or replace function public.handle_new_org()
     returns trigger
     language plpgsql
+    security definer set search_path = public
 as
 $$
 begin
