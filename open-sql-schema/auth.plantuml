@@ -1,0 +1,55 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class auth {
+   email: varchar
+   raw_user_meta_data: jsonb
+   phone: varchar
+   users: uuid
+}
+class org {
+   joined_student_count: integer
+   logo_url: varchar(200)
+   created_by: bigint
+   name: varchar(100)
+   description: varchar
+   created: timestamp with time zone
+   social_websites: hstore
+   id: integer
+}
+class org_member {
+   org_id: bigint
+   class: hstore
+   profiles_id: bigint
+}
+class profiles {
+   name: varchar(50)
+   uuid: uuid
+   logo_url: varchar
+   email: varchar(128)
+   university_id: integer
+   karma: integer
+   created: timestamp with time zone
+   social_websites: hstore
+   visit_history: hstore
+   id: bigint
+}
+class task {
+   created_by: integer
+   created_for: integer
+   created: timestamp with time zone
+   data_json: jsonb
+   id: bigint
+}
+
+org         -[#595959,plain]-^  profiles   : "created_by:id"
+org_member  -[#595959,plain]-^  org        : "org_id:id"
+org_member  -[#595959,plain]-^  profiles   : "org_id:id"
+org_member  -[#595959,plain]-^  profiles   : "profiles_id:id"
+profiles    -[#595959,plain]-^  auth       : "uuid:users"
+task        -[#595959,plain]-^  org        : "created_for:id"
+task        -[#595959,plain]-^  profiles   : "created_by:id"
+@enduml
