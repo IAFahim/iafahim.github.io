@@ -3,7 +3,7 @@ create table org
     id                   serial primary key,
     created_by           bigint references profiles (id),
     logo_url             varchar(200),
-    name                 varchar(100),
+    name                 varchar(100) unique,
     description          varchar,
     created              timestamptz default now(),
     joined_student_count int         default 1,

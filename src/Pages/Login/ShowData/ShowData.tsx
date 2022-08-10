@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {supabase} from "../../../SupaBase/SupabseUni";
-import {setNavigationProgress, startNavigationProgress} from "@mantine/nprogress";
 
 const MyComponent = () => {
     const [data, setData] = useState('Nodata')

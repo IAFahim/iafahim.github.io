@@ -1,6 +1,8 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Text, Card, Image, Button, Title, createStyles, TextInput} from "@mantine/core";
-import {User} from "../../SupaBase/SupabseUni";
+import {Profile} from "../../SupaBase/SupabseUni";
+import CreateNewClub from "./CreateNewClub/CreateNewClub";
+import JoinedClub from "./JoinedClub/JoinedClub";
 
 
 const useStyles = createStyles((theme) => ({
@@ -33,34 +35,32 @@ const useStyles = createStyles((theme) => ({
 }));
 
 function Home() {
-    const [data, setData] = useState(new User({
-        name: "Fahim",
-        email: "faimmanowarj5@gamil.com",
-        university: "NSU",
-        logo_url: "https://avatars.githubusercontent.com/u/63500913?s=40&v=4"
-    }));
-
-
+    const [data, setData] = useState(new Profile());
     const email = useRef("fahimmanowarj5@gmail.com");
-
     const {classes} = useStyles();
-
     return (
-        <Card className={classes.inner}>
-            <Image src={data.user.logo_url} height={192} alt={data.user.name} radius={"xs"} width={192}/>
-            <div className={classes.control}>
-                <Title className={classes.title}>{data.user.name}</Title>
-                <Text color="dimmed">University: {data.user.university}</Text>
-                <TextInput mt={"xl"} style={{flex: 1, minWidth: 300}} type={'email'} onChange={(e) => {
-                    email.current = e.target.value
-                    console.log(email.current)
-                }}></TextInput>
-                <Button mt={"md"} onClick={()=>{data.sendMagicLink(email.current)}}>Send</Button>
-                <Button mt={"md"} ml={"md"} onClick={()=>{data.getUser()}}>logit</Button>
-
-            </div>
-
-        </Card>
+        <>
+            <Card className={classes.inner}>
+                <Image src={data.profile.logo_url} withPlaceholder height={192} alt={data.profile.name} radius={"xs"}
+                       width={192}/>
+                <div className={classes.control}>
+                    <Title className={classes.title}>{data.profile.name}</Title>
+                    <Text color="dimmed">University: {data.profile.university_id}</Text>
+                    <TextInput mt={"xl"} style={{flex: 1, minWidth: 300}} type={'email'} onChange={(e) => {
+                        email.current = e.target.value
+                        console.log(email.current)
+                    }}></TextInput>
+                    <Button mt={"md"} onClick={() => {
+                        data.sendMagicLink(email.current)
+                    }}>Send</Button>
+                    <Button mt={"md"} ml={"md"} onClick={() => {
+                        data.fetchProfile()
+                    }}>logit</Button>
+                </div>
+            </Card>
+            <JoinedClub/>
+            <CreateNewClub data={data} universityName={data.profile.university_id} userName={data.profile.name}/>
+        </>
     );
 }
 

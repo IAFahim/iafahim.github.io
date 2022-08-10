@@ -7,7 +7,6 @@ import {
 import NavBarMantine from "./NavBarMantine/NavBarMantine";
 import HeaderMantine from "./HeaderMantine/HeaderMantine";
 import Clubs from "../../Pages/Clubs/Clubs";
-import {NavigationProgress} from "@mantine/nprogress";
 import { Route, Routes } from "react-router-dom";
 import Home from "../../Pages/Home/Home";
 import Page404 from "../../Pages/Page404/Page404";

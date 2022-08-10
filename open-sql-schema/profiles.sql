@@ -4,7 +4,6 @@ create table profiles
     name            varchar(50) unique                                            not null check ( length(name) > 2 and profiles.name ~* '[a-z]'),
     uuid            uuid references auth.users                                    not null,
     logo_url        varchar,
-    email           varchar(128),
     university_id   int,
     karma           int                      DEFAULT 0,
     created         timestamp with time zone default timezone('utc'::text, now()) not null,
