@@ -1,34 +1,51 @@
 create table profiles
 (
     id              bigserial primary key,
-    name            varchar(50) unique           not null check ( length(name) > 2 and profiles.name ~* '[a-z]'),
-    uuid            uuid references auth (users) not null,
+    name            varchar(50) unique                                            not null check ( length(name) > 2 and profiles.name ~* '[a-z]'),
+    uuid            uuid references auth.users                                    not null,
     logo_url        varchar,
     email           varchar(128),
     university_id   int,
-    karma           int DEFAULT 0,
-    created         timestamptz default now(),
+    karma           int                      DEFAULT 0,
+    created         timestamp with time zone default timezone('utc'::text, now()) not null,
     social_websites hstore,
     visit_history   hstore
 );
 
-create or replace function public.handle_new_user()
+alter table public.profiles
+    enable row level security;
+
+create policy "Public profiles are viewable by everyone."
+    on profiles for select
+    using (true);
+
+create policy "Users can insert their own profile."
+    on profiles for insert
+    with check (auth.uid() = uuid);
+
+create policy "Users can update own profile."
+    on profiles for update
+    using (auth.uid() = uuid);
+
+
+create or replace function public.handle_new_profile()
     returns trigger
     language plpgsql
     security definer set search_path = public
 as
 $$
+
 begin
-    insert into profiles (uuid, name)
+    insert into public.profiles (uuid, name)
     values (new.users, new.users);
     return new;
 end;
+
 $$;
 
 -- trigger the function every time a user is created
-create or replace trigger on_auth_user_created
-    after insert
-    on auth
-    for each row
-execute procedure handle_new_user();
+
+create or replace trigger on_new_user_created
+  after insert on auth.users
+  for each row execute procedure public.handle_new_profile();
 

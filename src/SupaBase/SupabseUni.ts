@@ -1,7 +1,7 @@
 import {createClient} from "@supabase/supabase-js";
 
-const supabaseUrl = 'https://rputpzgefrvvxneknacq.supabase.co'
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzNzYzOTU1MiwiZXhwIjoxOTUzMjE1NTUyfQ.Dt1UNSWSBrPsMAjiTv0fobcyjnne5B0PEHuFzBPfaaY'
+const supabaseUrl = 'https://qjfadaxadrjsmxpttxlr.supabase.co'
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFqZmFkYXhhZHJqc214cHR0eGxyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjAxNDQzNjQsImV4cCI6MTk3NTcyMDM2NH0.pXR-z0YGh3IhlM0RZ14aB2X3XWYvXjGj9LzYAfJgFI0'
 export const supabase = createClient(supabaseUrl, supabaseKey)
 
 interface user {
@@ -31,7 +31,7 @@ export class User {
     async getUser(){
         const { data } = await supabase
             .from('profiles')
-            .select('id, last_name')
+            .select('*')
         // @ts-ignore
         // this._user.name=data.username;
         // // @ts-ignore

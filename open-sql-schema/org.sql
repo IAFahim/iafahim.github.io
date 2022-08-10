@@ -24,7 +24,7 @@ $$;
 
 create or replace trigger on_new_org_created
     after insert
-    on org
+    on public.org
     for each row
 EXECUTE procedure handle_new_org();
 
