@@ -1,7 +1,7 @@
 create table profiles
 (
     id              bigserial primary key,
-    name            varchar(50) unique                                            not null check ( length(name) > 2 and profiles.name ~* '[a-z]'),
+    name            varchar(50) unique                                            not null,
     uuid            uuid references auth.users                                    not null,
     logo_url        varchar,
     university_id   int,
