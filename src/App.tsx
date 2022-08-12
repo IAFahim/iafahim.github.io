@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import AppShellMantine from "./Components/AppShell/AppShellMantine";
+import {Profile} from "./SupaBase/SupabseUni";
 
 function App() {
     return (
         <>
-            <AppShellMantine/>
+            <AppShellMantine profile={new Profile()}/>
         </>
     );
 }

@@ -14,7 +14,7 @@ import image from './ACM_Logo.png';
 import clubData from "./ClubData";
 import {NavLink, Route} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
-import Tasks from "../Tasks/Tasks";
+import Tasks from "../../Tasks/Tasks";
 import React from "react";
 
 const useStyles = createStyles((theme) => ({

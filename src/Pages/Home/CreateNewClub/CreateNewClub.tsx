@@ -13,7 +13,7 @@ const CreateNewClub = (props: any) => {
     const [clubName, setClubName] = useState(props.universityName + "-" + props.userName + "'s club");
     const [clubDescription, setClubDescription] = useState("");
     const handleCreateNewClub = async () => {
-        props.data.createClub({name: clubName, description: clubDescription});
+        props.data.create_org({name: clubName, description: clubDescription});
     }
     return (
         <Card>

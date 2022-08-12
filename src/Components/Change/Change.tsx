@@ -7,7 +7,6 @@ export default function Change(props:any) {
 
     return (
         <>
-
             <Settings onClick={() => setOpened((o) => !o)}/>
 
             <Dialog

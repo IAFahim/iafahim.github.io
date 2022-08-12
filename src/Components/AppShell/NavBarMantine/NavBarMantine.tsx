@@ -29,9 +29,9 @@ const mockdata = [
         ],
     },
     {
-        label: 'Clubs',
+        label: 'Club',
         icon: Clubs,
-        link: '/clubs',
+        link: '/club',
         links: [
             {label: 'Joined', link: '/'},
             {label: 'Join Club', link: '/'},

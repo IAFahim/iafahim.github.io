@@ -36,9 +36,9 @@ const useStyles = createStyles((theme) => ({
 
 }));
 
-function Home() {
-    const [data, setData] = useState(new Profile());
-    const email = useRef("fahimmanowarj5@gmail.com");
+function Home(props:any) {
+    const [data, setData] = useState<Profile>(props.profile);
+    const email = useRef("");
     const {classes} = useStyles();
     return (
         <>
@@ -56,7 +56,7 @@ function Home() {
                         data.sendMagicLink(email.current)
                     }}>Send</Button>
                     <Button mt={"md"} ml={"md"} onClick={() => {
-                        data.fetchProfile()
+                        data.fetch_profile()
                     }}>logit</Button>
                 </div>
             </Card>

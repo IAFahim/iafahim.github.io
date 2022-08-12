@@ -6,14 +6,16 @@ import {
 } from '@mantine/core';
 import NavBarMantine from "./NavBarMantine/NavBarMantine";
 import HeaderMantine from "./HeaderMantine/HeaderMantine";
-import Clubs from "../../Pages/Clubs/Clubs";
+import Clubs from "../../Pages/Club/Clubs/Clubs";
 import { Route, Routes } from "react-router-dom";
 import Home from "../../Pages/Home/Home";
 import Page404 from "../../Pages/Page404/Page404";
 import Tasks from "../../Pages/Tasks/Tasks";
 import Universities from "../../Pages/University/Universities/Universities";
+import {Profile} from "../../SupaBase/SupabseUni";
+import Club from "../../Pages/Club/Club";
 
-export default function AppShellMantine() {
+export default function AppShellMantine(props:any) {
     const theme = useMantineTheme();
     theme.colorScheme = "light";
     theme.fontFamily = "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"
@@ -32,8 +34,8 @@ export default function AppShellMantine() {
                                    navbarBreakPoint={navbarBreakPoint} height={48}/>}
         >
             <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="clubs" element={<Clubs />} />
+                <Route path="/" element={<Home profile={props.profile}/>} />
+                <Route path="club" element={<Club profile={props.profile}/>} />
 
                 <Route path="task" element={<Tasks/>} />
                 <Route path="universities" element={<Universities/>} />
