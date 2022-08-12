@@ -12,6 +12,8 @@ interface profile {
     university_id?: string,
     karma?: number,
     social_websites?: string[],
+    created?: Date;
+    updated?: Date;
     visit_history?: string[]
 }
 
@@ -54,7 +56,7 @@ export class Profile {
         // @ts-ignore
         console.log(data[0]);
         // @ts-ignore
-        this._profile = data[0];
+        this._profile = {...data[0]};
         this.saveProfile();
     }
 
@@ -67,7 +69,8 @@ export class Profile {
     }
 
     async saveProfile() {
-        let data = JSON.stringify(this._profile)
+        this._profile.updated=new Date();
+        let data = JSON.stringify({...this._profile})
         localStorage.setItem("Profile", data);
     }
 
@@ -77,12 +80,25 @@ export class Profile {
     }
 
     async createClub(org: org) {
-        const { data, error } = await supabase
+        const {data, error} = await supabase
             .from('org')
             .insert([
-                { created_by: this._profile.id, name: org.name, description:org.description },
+                {created_by: this._profile.id, name: org.name, description: org.description},
             ]);
         console.log(data);
+    }
+
+    getDateNow() {
+        return new Date(Date.now() + (1000 * 60 * (-(new Date()).getTimezoneOffset()))).toISOString().replace('T', ' ').replace('Z', '')
+    }
+
+    parseDateFromPostgresql(s: string) {
+        let b = s.split(/\D/);
+        // @ts-ignore
+        --b[1];                  // Adjust month number
+        b[6] = b[6].substr(0, 3); // Microseconds to milliseconds
+        // @ts-ignore
+        return new Date(Date.UTC(...b));
     }
 
 }

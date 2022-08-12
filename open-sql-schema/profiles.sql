@@ -6,7 +6,8 @@ create table profiles
     logo_url        varchar,
     university_id   int,
     karma           int                      DEFAULT 0,
-    created         timestamp with time zone default timezone('utc'::text, now()) not null,
+    created         timestamptz default now() not null,
+    updated         timestamptz,
     social_websites hstore,
     visit_history   hstore
 );

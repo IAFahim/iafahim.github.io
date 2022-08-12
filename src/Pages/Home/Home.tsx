@@ -3,6 +3,8 @@ import {Text, Card, Image, Button, Title, createStyles, TextInput} from "@mantin
 import {Profile} from "../../SupaBase/SupabseUni";
 import CreateNewClub from "./CreateNewClub/CreateNewClub";
 import JoinedClub from "./JoinedClub/JoinedClub";
+import {Edit, Settings} from "tabler-icons-react";
+import Change from "../../Components/Change/Change";
 
 
 const useStyles = createStyles((theme) => ({
@@ -44,7 +46,7 @@ function Home() {
                 <Image src={data.profile.logo_url} withPlaceholder height={192} alt={data.profile.name} radius={"xs"}
                        width={192}/>
                 <div className={classes.control}>
-                    <Title className={classes.title}>{data.profile.name}</Title>
+                    <Title className={classes.title}>{data.profile.name}<Change/></Title>
                     <Text color="dimmed">University: {data.profile.university_id}</Text>
                     <TextInput mt={"xl"} style={{flex: 1, minWidth: 300}} type={'email'} onChange={(e) => {
                         email.current = e.target.value
@@ -60,6 +62,7 @@ function Home() {
             </Card>
             <JoinedClub/>
             <CreateNewClub data={data} universityName={data.profile.university_id} userName={data.profile.name}/>
+
         </>
     );
 }

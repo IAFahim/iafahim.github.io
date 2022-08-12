@@ -5,10 +5,13 @@ create table org
     logo_url             varchar(200),
     name                 varchar(100) unique,
     description          varchar,
-    created              timestamptz default now(),
+    created              timestamptz default now() not null,
+    updated              timestamptz,
     joined_student_count int         default 1,
     social_websites      hstore
 );
+
+alter table org add column updated timestamptz;
 
 create or replace function public.handle_new_org()
     returns trigger
