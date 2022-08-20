@@ -3,8 +3,11 @@ import {Text, Card, Image, Button, Title, createStyles, TextInput} from "@mantin
 import {Profile} from "../../SupaBase/SupabseUni";
 import CreateNewClub from "./CreateNewClub/CreateNewClub";
 import JoinedClub from "./JoinedClub/JoinedClub";
-import {Edit, Settings} from "tabler-icons-react";
+
 import Change from "../../Components/Change/Change";
+import Login from "../Login/Login";
+import ChangeProfileData from "./ChangeProfileData/ChangeProfileData";
+import {Edit, EditCircle} from "tabler-icons-react";
 
 
 const useStyles = createStyles((theme) => ({
@@ -32,36 +35,31 @@ const useStyles = createStyles((theme) => ({
             flex: 1,
         },
     },
-
-
 }));
 
-function Home(props:any) {
-    const [data, setData] = useState<Profile>(props.profile);
-    const email = useRef("");
+function Home(props: any) {
+    const [profile, setProfile] = useState<Profile>(props.profile);
+    const [changeProfile, setChangeProfile] = useState(false);
+
+
     const {classes} = useStyles();
     return (
         <>
+            {profile.profile.name !== "Guest" && <Login profile={profile}/>}
             <Card className={classes.inner}>
-                <Image src={data.profile.logo_url} withPlaceholder height={192} alt={data.profile.name} radius={"xs"}
+                <Image src={profile.profile.logo_url} withPlaceholder height={192} alt={profile.profile.name}
+                       radius={"xs"}
                        width={192}/>
                 <div className={classes.control}>
-                    <Title className={classes.title}>{data.profile.name}<Change/></Title>
-                    <Text color="dimmed">University: {data.profile.university_id}</Text>
-                    <TextInput mt={"xl"} style={{flex: 1, minWidth: 300}} type={'email'} onChange={(e) => {
-                        email.current = e.target.value
-                        console.log(email.current)
-                    }}></TextInput>
-                    <Button mt={"md"} onClick={() => {
-                        data.sendMagicLink(email.current)
-                    }}>Send</Button>
-                    <Button mt={"md"} ml={"md"} onClick={() => {
-                        data.fetch_profile()
-                    }}>logit</Button>
+                    <Title className={classes.title}>{profile.profile.name}<Edit style={{paddingLeft:10}}/></Title>
+                    <Text color="dimmed">University: {profile.profile.university_name}</Text>
                 </div>
             </Card>
+            {changeProfile && <ChangeProfileData profile={profile} setProfile={setProfile}/>}
+
             <JoinedClub/>
-            <CreateNewClub data={data} universityName={data.profile.university_id} userName={data.profile.name}/>
+            <CreateNewClub data={profile} universityName={profile.profile.university_id}
+                           userName={profile.profile.name}/>
 
         </>
     );

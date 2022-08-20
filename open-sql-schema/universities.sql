@@ -8,5 +8,6 @@ create table universities
     address        varchar(200),
     created_at     timestamptz default now(),
     updated_at     timestamptz,
-    links          hstore
+    links          varchar[]
 );
+

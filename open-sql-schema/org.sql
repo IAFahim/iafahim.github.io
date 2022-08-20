@@ -8,7 +8,7 @@ create table org
     created              timestamptz default now() not null,
     updated              timestamptz,
     joined_student_count int         default 1,
-    social_websites      hstore
+    social_websites      varchar[]
 );
 
 alter table org add column updated timestamptz;

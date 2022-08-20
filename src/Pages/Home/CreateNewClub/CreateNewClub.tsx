@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {Button, Card, Text, Textarea, TextInput} from "@mantine/core";
+import {Button, Card, Title, Textarea, TextInput} from "@mantine/core";
 
 interface org {
     logo_url?: string,
@@ -9,7 +9,6 @@ interface org {
 }
 
 const CreateNewClub = (props: any) => {
-    const org = useRef<org>({name: props.universityName + "-" + props.userName + "'s club"});
     const [clubName, setClubName] = useState(props.universityName + "-" + props.userName + "'s club");
     const [clubDescription, setClubDescription] = useState("");
     const handleCreateNewClub = async () => {
@@ -17,7 +16,7 @@ const CreateNewClub = (props: any) => {
     }
     return (
         <Card>
-            <Text>Create New Club</Text>
+            <Title>Create New Club</Title>
             <TextInput required mt={"xs"} mb={"xs"}
                        label="Club Name"
                        value={clubName}

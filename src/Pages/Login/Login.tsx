@@ -1,55 +1,46 @@
-import {useState} from 'react'
+import React, {useRef, useState} from 'react'
 import {supabase} from '../../SupaBase/SupabseUni'
-import ShowData from "./ShowData/ShowData";
+import {Button, Card, createStyles, TextInput, Title} from "@mantine/core";
+import {Edit, Mail, Settings} from "tabler-icons-react";
 
-export default function Auth() {
-    const [loading, setLoading] = useState(false)
-    const [email, setEmail] = useState('')
+const useStyles = createStyles((theme) => ({
+    inner: {
+        display: 'flex',
+        justifyContent: 'start',
+        paddingTop: theme.spacing.xl,
+        paddingBottom: theme.spacing.xl
+    },
+
+    title: {
+        color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+        fontSize: 44,
+        lineHeight: 1.2,
+        fontWeight: 900,
+        [theme.fn.smallerThan('xs')]: {
+            fontSize: 28,
+        },
+    },
 
 
-    const handleLogin = async (e: any) => {
-        e.preventDefault()
-
-        try {
-            setLoading(true)
-            const {error} = await supabase.auth.signIn({email})
-            if (error) throw error
-            alert('Check your email for the login link!')
-        } catch (error) {
-            // @ts-ignore
-            alert(error.error_description || error.message)
-        } finally {
-            setLoading(false)
-        }
-    }
 
 
+}));
+
+export default function Login(props:any) {
+    const {classes} = useStyles();
+    const email = useRef("");
 
     return (
-        <div className="row flex flex-center">
-            <div className="col-6 form-widget" aria-live="polite">
-                <h1 className="header">Supabase + React</h1>
-                <p className="description">Sign in via magic link with your email below</p>
-                {loading ? (
-                    'Sending magic link...'
-                ) : (
-                    <form onSubmit={handleLogin}>
-                        <label htmlFor="email">Email</label>
-                        <input
-                            id="email"
-                            className="inputField"
-                            type="email"
-                            placeholder="Your email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                        <button className="button block" aria-live="polite">
-                            Send magic link
-                        </button>
-                    </form>
-                )}
-            </div>
-            <ShowData/>
-        </div>
-    )
+    <Card className={classes.inner} style={{flexDirection: "column"}}>
+        <Title>Login</Title>
+        <TextInput mt={"md"} type={'email'} placeholder={'Email'} icon={<Mail/>} onChange={(e) => {
+            email.current = e.target.value
+        }}></TextInput>
+        <Button mt={"xs"} onClick={() => {
+            props.profile.sendMagicLink(email.current)
+        }}>Send</Button>
+
+    </Card>
+)
 }

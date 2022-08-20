@@ -8,7 +8,7 @@ create table profiles
     karma           int                      DEFAULT 0,
     created         timestamptz default now() not null,
     updated         timestamptz,
-    social_websites hstore,
+    social_websites varchar[],
     visit_history   hstore
 );
 
