@@ -14,6 +14,7 @@ import Tasks from "../../Pages/Tasks/Tasks";
 import Universities from "../../Pages/University/Universities/Universities";
 import {Profile} from "../../SupaBase/SupabseUni";
 import Club from "../../Pages/Club/Club";
+import CreateNewClub from "../../Pages/Club/Clubs/CreateNewClub/CreateNewClub";
 
 export default function AppShellMantine(props:any) {
     const theme = useMantineTheme();
@@ -36,6 +37,7 @@ export default function AppShellMantine(props:any) {
             <Routes>
                 <Route path="/" element={<Home profile={props.profile}/>} />
                 <Route path="club" element={<Club profile={props.profile}/>} />
+                <Route path="create-club" element={<CreateNewClub profile={props.profile}/>} />
 
                 <Route path="task" element={<Tasks/>} />
                 <Route path="universities" element={<Universities/>} />

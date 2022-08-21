@@ -1,7 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Text, Card, Image, Button, Title, createStyles, TextInput} from "@mantine/core";
 import {Profile} from "../../SupaBase/SupabseUni";
-import CreateNewClub from "./CreateNewClub/CreateNewClub";
 import JoinedClub from "./JoinedClub/JoinedClub";
 
 import Change from "../../Components/Change/Change";
@@ -39,28 +38,27 @@ const useStyles = createStyles((theme) => ({
 
 function Home(props: any) {
     const [profile, setProfile] = useState<Profile>(props.profile);
-    const [changeProfile, setChangeProfile] = useState(false);
+    const [isChangingProfile, setIsChangingProfile] = useState(false);
 
-
+    const handleChangeProfileData = () => {
+      setIsChangingProfile(!isChangingProfile);
+    }
     const {classes} = useStyles();
     return (
         <>
-            {profile.profile.name !== "Guest" && <Login profile={profile}/>}
+            {profile.profile.name === "Guest" && <Login profile={profile}/>}
             <Card className={classes.inner}>
                 <Image src={profile.profile.logo_url} withPlaceholder height={192} alt={profile.profile.name}
                        radius={"xs"}
                        width={192}/>
                 <div className={classes.control}>
-                    <Title className={classes.title}>{profile.profile.name}<Edit style={{paddingLeft:10}}/></Title>
+                    <Title className={classes.title}>{profile.profile.name}</Title>
                     <Text color="dimmed">University: {profile.profile.university_name}</Text>
                 </div>
             </Card>
-            {changeProfile && <ChangeProfileData profile={profile} setProfile={setProfile}/>}
-
+            <Button ml='md' style={{width:192}} variant={"gradient"} onClick={handleChangeProfileData}>Edit Profile</Button>
+            {isChangingProfile && <ChangeProfileData profile={profile} isChangingProfile={isChangingProfile} setIsChangingProfile={setIsChangingProfile}/>}
             <JoinedClub/>
-            <CreateNewClub data={profile} universityName={profile.profile.university_id}
-                           userName={profile.profile.name}/>
-
         </>
     );
 }

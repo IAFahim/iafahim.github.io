@@ -10,7 +10,12 @@ const ChangeProfileData = (props: any) => {
     const [university_name, setUniversity_name] = useInputState(props.profile.profile.university_name);
 
     const handleProfileChange = () => {
+        props.profile.fetch_Change_ProfileName_University_name(profileName, university_name);
+        handleClose();
+    }
 
+    const handleClose = () => {
+        props.setIsChangingProfile(false);
     }
 
     return (
@@ -22,7 +27,7 @@ const ChangeProfileData = (props: any) => {
                        placeholder={"University"}></TextInput>
             <div style={{display:"flex", justifyContent:"flex-end"}}>
                 <Button m={"xs"} type={"submit"} variant={"gradient"} onClick={handleProfileChange}>Save</Button>
-                <Button mt={"xs"} type={"submit"} variant={"outline"}>Cancel</Button>
+                <Button onClick={handleClose} mt={"xs"} type={"submit"} variant={"outline"}>Cancel</Button>
 
             </div>
         </Card>

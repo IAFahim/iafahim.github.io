@@ -73,6 +73,22 @@ export class Profile {
         }
     }
 
+    async fetch_Change_ProfileName_University_name(name: string, university_name: string) {
+        this._profile.name = name;
+        this._profile.university_name = university_name;
+
+        const {error} = await supabase
+            .from('profiles')
+            .update({
+                name: name
+            }).eq('id', this._profile.id)
+        if (error) {
+            alert("cant update profile")
+        }else {
+            this.store_profile();
+        }
+    }
+
     get profile(): profile {
         return this._profile;
     }
