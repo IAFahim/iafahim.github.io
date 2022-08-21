@@ -1,13 +1,13 @@
 import React from 'react';
 import {Text, Card} from "@mantine/core";
 
-const JoinedClub = () => {
+const JoinedOrg = () => {
     return (
         <Card>
-            <Text>Joined Club</Text>
+            <Text>Joined Org</Text>
             <Text color="dimmed">None</Text>
         </Card>
     );
 };
 
-export default JoinedClub;
+export default JoinedOrg;

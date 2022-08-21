@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Text, Card, Image, Button, Title, createStyles, TextInput} from "@mantine/core";
 import {Profile} from "../../SupaBase/SupabseUni";
-import JoinedClub from "./JoinedClub/JoinedClub";
+import JoinedOrg from "./JoinedOrg/JoinedOrg";
 
 import Change from "../../Components/Change/Change";
 import Login from "../Login/Login";
@@ -58,7 +58,7 @@ function Home(props: any) {
             </Card>
             <Button ml='md' style={{width:192}} variant={"gradient"} onClick={handleChangeProfileData}>Edit Profile</Button>
             {isChangingProfile && <ChangeProfileData profile={profile} isChangingProfile={isChangingProfile} setIsChangingProfile={setIsChangingProfile}/>}
-            <JoinedClub/>
+            <JoinedOrg/>
         </>
     );
 }

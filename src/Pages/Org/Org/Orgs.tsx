@@ -11,7 +11,7 @@ import {
 } from '@mantine/core';
 import {Icon} from 'tabler-icons-react';
 import image from './ACM_Logo.png';
-import clubData from "./ClubData";
+import orgData from "./OrgData";
 import {NavLink, Route, useParams} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 import Tasks from "../../Tasks/Tasks";
@@ -67,7 +67,7 @@ function Task(props: any) {
     );
 }
 
-export default function Clubs() {
+export default function Orgs() {
 
 
     const {classes} = useStyles();
@@ -77,18 +77,18 @@ export default function Clubs() {
             <Image src={image} withPlaceholder className={classes.image} fit={"contain"}/>
             <div className={classes.content}>
                 <Title className={classes.title}>
-                    {clubData.name}
+                    {orgData.name}
                 </Title>
-                <Text color="dimmed" size={20}>Memeber: {clubData.user_count}</Text>
+                <Text color="dimmed" size={20}>Memeber: {orgData.user_count}</Text>
                 <Text color="dimmed" mt="md">
-                    {clubData.description}
+                    {orgData.description}
                 </Text>
                 <Group mt={30}>
 
                     <Button radius="xl" size="md" className={classes.control}>
                         Apply
                     </Button>
-                    <NavLink style={{textDecoration: 'none'}} to={clubData.name + ''}>
+                    <NavLink style={{textDecoration: 'none'}} to={orgData.name + ''}>
                         <Button variant="default" radius="xl" size="md" className={classes.control}>
                             Manage
                         </Button>

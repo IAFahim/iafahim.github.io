@@ -19,7 +19,7 @@ export default class Org {
                 {created_by: profile.name, name: org.name, description: org.description},
             ]);
         if (error) {
-            alert("Club exists")
+            alert("Org exists")
         } else {
             // @ts-ignore
             org = {...data};
@@ -46,7 +46,7 @@ export default class Org {
             .from('org')
             .select('*').eq('id', id)
         if (error) {
-            alert("Club doesn't exist, Handsome");
+            alert("Org doesn't exist, Handsome");
         }
         // @ts-ignore
         localStorage.set(id + "", JSON.stringify(data[0]))

@@ -29,13 +29,13 @@ const mockdata = [
         ],
     },
     {
-        label: 'Club',
+        label: 'Organizations',
         icon: Clubs,
-        link: '/club',
+        link: '/org',
         links: [
-            {label: 'Joined', link: '/clubs'},
-            {label: 'Create Club', link: '/create-club'},
-            {label: 'All Clubs', link: '/all-clubs'},
+            {label: 'Joined', link: '/org'},
+            {label: 'Create Org', link: '/create-org'},
+            {label: 'All Org', link: '/all-org'},
         ],
     },
     {

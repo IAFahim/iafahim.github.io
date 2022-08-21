@@ -3,13 +3,13 @@ import {Profile} from "../../SupaBase/SupabseUni";
 import {Text} from "@mantine/core";
 
 let isLoading = false;
-const Club = (props: any) => {
-    const [clubsData, setClubsData] = useState<Profile>(props.profile);
-    const [joinedClubs, setJoinedClubs] = useState([]);
+const Org = (props: any) => {
+    const [orgsData, setOrgsData] = useState<Profile>(props.profile);
+    const [joinedOrgs, setJoinedOrgs] = useState([]);
 
 
-    const handleFatchJoinedClub = () => {
-        clubsData._org.fetch_joined_org_list(clubsData.profile).then(data => {
+    const handleFatchJoinedOrg = () => {
+        orgsData._org.fetch_joined_org_list(orgsData.profile).then(data => {
             console.log(data);
             isLoading= false;
         })
@@ -18,7 +18,7 @@ const Club = (props: any) => {
     useEffect(() => {
         if (!isLoading) {
             isLoading=true;
-            handleFatchJoinedClub();
+            handleFatchJoinedOrg();
         }
     }, []);
 
@@ -29,4 +29,4 @@ const Club = (props: any) => {
     );
 };
 
-export default Club;
+export default Org;

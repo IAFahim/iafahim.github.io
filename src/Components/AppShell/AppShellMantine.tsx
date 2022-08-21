@@ -6,15 +6,15 @@ import {
 } from '@mantine/core';
 import NavBarMantine from "./NavBarMantine/NavBarMantine";
 import HeaderMantine from "./HeaderMantine/HeaderMantine";
-import Clubs from "../../Pages/Club/Clubs/Clubs";
+import Orgs from "../../Pages/Org/Org/Orgs";
 import { Route, Routes } from "react-router-dom";
 import Home from "../../Pages/Home/Home";
 import Page404 from "../../Pages/Page404/Page404";
 import Tasks from "../../Pages/Tasks/Tasks";
 import Universities from "../../Pages/University/Universities/Universities";
 import {Profile} from "../../SupaBase/SupabseUni";
-import Club from "../../Pages/Club/Club";
-import CreateNewClub from "../../Pages/Club/Clubs/CreateNewClub/CreateNewClub";
+import Org from "../../Pages/Org/Org";
+import CreateNewOrg from "../../Pages/Org/Org/CreateNewOrg/CreateNewOrg";
 
 export default function AppShellMantine(props:any) {
     const theme = useMantineTheme();
@@ -36,8 +36,8 @@ export default function AppShellMantine(props:any) {
         >
             <Routes>
                 <Route path="/" element={<Home profile={props.profile}/>} />
-                <Route path="club" element={<Club profile={props.profile}/>} />
-                <Route path="create-club" element={<CreateNewClub profile={props.profile}/>} />
+                <Route path="org" element={<Org profile={props.profile}/>} />
+                <Route path="create-org" element={<CreateNewOrg profile={props.profile}/>} />
 
                 <Route path="task" element={<Tasks/>} />
                 <Route path="universities" element={<Universities/>} />
