@@ -1,5 +1,5 @@
 import {createClient} from "@supabase/supabase-js";
-import Org from "./Org";
+import Org,{org} from "./Org";
 
 const supabaseUrl = 'https://qjfadaxadrjsmxpttxlr.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFqZmFkYXhhZHJqc214cHR0eGxyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjAxNDQzNjQsImV4cCI6MTk3NTcyMDM2NH0.pXR-z0YGh3IhlM0RZ14aB2X3XWYvXjGj9LzYAfJgFI0'

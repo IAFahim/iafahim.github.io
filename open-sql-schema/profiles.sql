@@ -10,6 +10,7 @@ create table profiles
     updated         timestamptz,
     social_websites varchar[],
     visit_history   hstore
+
 );
 
 alter table public.profiles

@@ -1,18 +1,4 @@
-import {
-    Card,
-    Grid,
-    Text,
-    Image,
-    Paper,
-    Skeleton,
-    useMantineTheme,
-    createStyles,
-    Code,
-    Title,
-    Group, Button
-} from '@mantine/core';
-import {Car, Icon as TablerIcon} from "tabler-icons-react";
-import {NavLink} from "react-router-dom";
+import {Card, createStyles, Image, Text, Title, useMantineTheme} from '@mantine/core';
 import React from "react";
 
 

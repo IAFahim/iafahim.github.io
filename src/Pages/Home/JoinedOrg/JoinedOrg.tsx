@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, Card} from "@mantine/core";
+import {Card, Text} from "@mantine/core";
 
 const JoinedOrg = () => {
     return (

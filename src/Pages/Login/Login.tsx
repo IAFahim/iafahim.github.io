@@ -1,7 +1,6 @@
-import React, {useRef, useState} from 'react'
-import {supabase} from '../../SupaBase/SupabseUni'
+import React, {useRef} from 'react'
 import {Button, Card, createStyles, TextInput, Title} from "@mantine/core";
-import {Edit, Mail, Settings} from "tabler-icons-react";
+import {Mail} from "tabler-icons-react";
 
 const useStyles = createStyles((theme) => ({
     inner: {

@@ -1,8 +1,7 @@
 import React from 'react';
-import {Card, TextInput, Title, Button} from "@mantine/core";
+import {Button, Card, TextInput, Title} from "@mantine/core";
 import {useInputState} from '@mantine/hooks';
-import {Database, Dots, School, Send, User} from "tabler-icons-react";
-import Change from "../../../Components/Change/Change";
+import {School, User} from "tabler-icons-react";
 
 const ChangeProfileData = (props: any) => {
 

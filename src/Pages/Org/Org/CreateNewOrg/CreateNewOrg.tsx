@@ -1,6 +1,7 @@
-import React, {useRef, useState} from 'react';
-import {Button, Card, Title, Textarea, TextInput} from "@mantine/core";
+import React from 'react';
+import {Button, Card, Textarea, TextInput, Title} from "@mantine/core";
 import {useInputState} from "@mantine/hooks";
+import {profile} from "../../../../SupaBase/SupabseUni";
 
 interface org {
     logo_url?: string,
@@ -10,10 +11,10 @@ interface org {
 }
 
 const CreateNewOrg = (props: any) => {
-    const [orgName, setOrgName] = useInputState(  props.profile.profile.name + "'s org");
+    const [orgName, setOrgName] = useInputState(props.profile.profile.name + "'s org");
     const [orgDescription, setOrgDescription] = useInputState("");
     const handleCreateNewOrg = async () => {
-        props.profile.create_org({name: orgName, description: orgDescription});
+        props.profile._org.create_org(props.profile.profile as profile, {name: orgName, orgDescription} as org);
     }
 
     return (

@@ -1,12 +1,9 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {Text, Card, Image, Button, Title, createStyles, TextInput} from "@mantine/core";
+import React, {useState} from 'react';
+import {Button, Card, createStyles, Image, Text, Title} from "@mantine/core";
 import {Profile} from "../../SupaBase/SupabseUni";
 import JoinedOrg from "./JoinedOrg/JoinedOrg";
-
-import Change from "../../Components/Change/Change";
 import Login from "../Login/Login";
 import ChangeProfileData from "./ChangeProfileData/ChangeProfileData";
-import {Edit, EditCircle} from "tabler-icons-react";
 
 
 const useStyles = createStyles((theme) => ({

@@ -1,4 +1,4 @@
-import {MultiSelect, Card, Paper, useMantineTheme, TextInput, Code, ScrollArea} from '@mantine/core';
+import {Code, MultiSelect, Paper, ScrollArea, TextInput} from '@mantine/core';
 import COUNTRY_NAMES from "../Data/countryNames";
 import {useState} from "react";
 import {Search} from "tabler-icons-react";
