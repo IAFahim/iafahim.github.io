@@ -4,7 +4,7 @@ import {Text, Card} from "@mantine/core";
 const JoinedOrg = () => {
     return (
         <Card>
-            <Text>Joined Org</Text>
+            <Text>Joined Organization</Text>
             <Text color="dimmed">None</Text>
         </Card>
     );

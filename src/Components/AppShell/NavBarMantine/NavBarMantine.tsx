@@ -34,8 +34,8 @@ const mockdata = [
         link: '/org',
         links: [
             {label: 'Joined', link: '/org'},
-            {label: 'Create Org', link: '/create-org'},
-            {label: 'All Org', link: '/all-org'},
+            {label: 'Create Organization', link: '/create-org'},
+            {label: 'All Organization', link: '/all-org'},
         ],
     },
     {
@@ -56,9 +56,7 @@ const mockdata = [
         icon: Adjustments,
         link: '/settings',
         links: [
-            {label: 'Enable 2FA', link: '/'},
-            {label: 'Change password', link: '/'},
-            {label: 'Recovery codes', link: '/'},
+            {label: 'Change email', link: '/'}
         ],
     },
 ];

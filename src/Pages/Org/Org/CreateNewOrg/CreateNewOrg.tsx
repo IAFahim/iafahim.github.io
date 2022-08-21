@@ -18,15 +18,15 @@ const CreateNewOrg = (props: any) => {
 
     return (
         <Card>
-            <Title>Create New Org</Title>
+            <Title>Create New Organization</Title>
             <TextInput required mt={"xs"} mb={"xs"}
-                       label="Org Name"
+                       label="Organization Name"
                        value={orgName}
                        placeholder={props.profile.profile.name + "'s org"}
                        onChange={setOrgName}
             />
             <Textarea mt={"xs"} mb={"xs"}
-                      label="Org Description"
+                      label="Organization Description"
                       value={orgDescription}
                       onChange={setOrgDescription}
                       placeholder={"Description"}/>
