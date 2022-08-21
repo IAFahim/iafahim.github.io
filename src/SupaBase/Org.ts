@@ -60,6 +60,11 @@ export default class Org {
     async store_joined_org(arr: any) {
         arr.forEach((e: org_member) => {
             this._orgId.set(e.org_id, e.status);
+            let org = localStorage.getItem('org ' + e.org_id);
+            if (org) {
+                // @ts-ignore
+                this._org.set(e.org_id, JSON.parse(org));
+            }
         })
         localStorage.setItem("org", JSON.stringify(arr))
 

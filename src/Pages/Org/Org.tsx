@@ -30,7 +30,7 @@ const Org = (props: any) => {
             isLoading = true;
             handleFatchJoinedOrg();
         }
-    }, []);
+    });
 
     const theme = useMantineTheme();
     let rows=[] as any ;

@@ -48,13 +48,13 @@ const useStyles = createStyles((theme) => ({
 interface university {
     name?: string;
     img?: string;
-    abbreviation: string;
-    web_page: string;
-    address: string;
+    abbreviation?: string;
+    web_page?: string;
+    address?: string;
     students_count?: number;
     c_o_count?: number;
-    mail: string;
-    phone: string;
+    mail?: string;
+    phone?: string;
 }
 
 export function University(props: university | null) {

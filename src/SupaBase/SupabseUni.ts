@@ -1,5 +1,5 @@
 import {createClient} from "@supabase/supabase-js";
-import Org,{org} from "./Org";
+import Org, {org} from "./Org";
 
 const supabaseUrl = 'https://qjfadaxadrjsmxpttxlr.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFqZmFkYXhhZHJqc214cHR0eGxyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjAxNDQzNjQsImV4cCI6MTk3NTcyMDM2NH0.pXR-z0YGh3IhlM0RZ14aB2X3XWYvXjGj9LzYAfJgFI0'
@@ -8,6 +8,7 @@ export const supabase = createClient(supabaseUrl, supabaseKey)
 export interface profile {
     id?: number,
     name?: string,
+    uuid?: string,
     email?: string,
     logo_url?: string,
     university_name?: string,
@@ -21,10 +22,10 @@ export interface profile {
 
 export class Profile {
     private _profile = {
-        name: "",
+        name: "Guest",
         logo_url: "",
         email: "",
-        university_name:"",
+        university_name: "Secret",
         university_id: 0,
         karma: 0,
         social_websites: [],
@@ -35,20 +36,20 @@ export class Profile {
     _org = new Org();
 
     constructor() {
-        const profile = this.get_profile();
+        let profile=this.get_profile();
+        console.log(profile)
         if (profile == null) {
             this._profile = {
                 name: "Guest",
                 university_name: "Secret"
             }
-        } else {
+        }else {
             this._profile = profile;
         }
     }
 
     async sendMagicLink(email: string) {
         this._profile.email = email;
-        this.store_profile();
         const {error} = await supabase.auth.signIn({email: email})
         if (error) {
             // @ts-ignore
@@ -59,14 +60,10 @@ export class Profile {
     async fetch_profile() {
         const {data, error} = await supabase
             .from('profiles')
-            .select('*').eq("uuid", supabase.auth.user()?.id)
-
+            .select('*').eq("uuid", this._profile.uuid)
         if (error) {
             alert("cant create profile")
         } else {
-
-            // @ts-ignore
-            console.log(data[0]);
             // @ts-ignore
             this._profile = {...data[0]};
             this.store_profile();
@@ -76,16 +73,20 @@ export class Profile {
     async fetch_Change_ProfileName_University_name(name: string, university_name: string) {
         this._profile.name = name;
         this._profile.university_name = university_name;
-
+        // @ts-ignore
+        let auth = localStorage.getItem("supabase.auth.token")
+        if (auth) {
+            this._profile.uuid = JSON.parse(auth).currentSession.user.id;
+        }
         const {error} = await supabase
             .from('profiles')
             .update({
                 name: name
-            }).eq('id', this._profile.id)
+            }).eq('uuid', this._profile.uuid)
         if (error) {
             alert("cant update profile")
-        }else {
-            this.store_profile();
+        } else {
+            this.fetch_profile();
         }
     }
 
@@ -104,6 +105,11 @@ export class Profile {
     }
 
     get_profile() {
+        // @ts-ignore
+        let auth = localStorage.getItem("supabase.auth.token")
+        if (auth) {
+            this._profile.uuid = JSON.parse(auth).currentSession.user.id;
+        }
         // @ts-ignore
         return JSON.parse(localStorage.getItem("Profile"))
     }

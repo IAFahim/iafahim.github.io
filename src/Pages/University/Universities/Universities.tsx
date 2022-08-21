@@ -1,6 +1,6 @@
 import {Code, MultiSelect, Paper, ScrollArea, TextInput} from '@mantine/core';
 import COUNTRY_NAMES from "../Data/countryNames";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Search} from "tabler-icons-react";
 import {University} from "./University";
 
@@ -11,14 +11,25 @@ export default function Universities() {
         getUniversityList(e[0])
         setValue(e)
     }
-
+    const universityList = [] as any;
     const getUniversityList = async (country: string) => {
         fetch("https://raw.githubusercontent.com/IAFahim/iafahim.github.io/master/public-university-data/" + country.toLowerCase() + ".json").then(e => {
             e.json().then(data =>
-                console.log(data)
+                {
+                    universityList.push(<University key={data.web_pages}
+                                                     name={data.name}
+                                                     web_page={data.web_pages}/>)
+
+                }
             )
         })
     }
+
+    useEffect(() => {
+        getUniversityList("Bangladesh")
+    })
+
+
 
     return (
         <ScrollArea>
@@ -36,7 +47,7 @@ export default function Universities() {
                              data={COUNTRY_NAMES}
                              value={value}
                              p={"sm"}
-                    // @ts-ignore
+
                              onChange={handleChange}
                              placeholder="Select region"
                              searchable
@@ -45,6 +56,7 @@ export default function Universities() {
                              clearable
                 />
             </Paper>
+
             <University key={"NSU"}
                         abbreviation={"NSU"}
                         name={"North South University"}
@@ -56,6 +68,8 @@ export default function Universities() {
                         mail={"registrar@northsouth.edu"}
                         phone={"+880-2-55668200"}
             />
+
+            {universityList}
 
 
         </ScrollArea>

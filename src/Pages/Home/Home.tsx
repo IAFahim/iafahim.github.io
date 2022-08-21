@@ -38,12 +38,12 @@ function Home(props: any) {
     const [isChangingProfile, setIsChangingProfile] = useState(false);
 
     const handleChangeProfileData = () => {
-      setIsChangingProfile(!isChangingProfile);
+        setIsChangingProfile(!isChangingProfile);
     }
     const {classes} = useStyles();
     return (
         <>
-            {profile.profile.name === "Guest" && <Login profile={profile}/>}
+            {localStorage.length < 1 && <Login profile={profile}/>}
             <Card className={classes.inner}>
                 <Image src={profile.profile.logo_url} withPlaceholder height={192} alt={profile.profile.name}
                        radius={"xs"}
@@ -53,8 +53,10 @@ function Home(props: any) {
                     <Text color="dimmed">University: {profile.profile.university_name}</Text>
                 </div>
             </Card>
-            <Button ml='md' style={{width:192}} variant={"gradient"} onClick={handleChangeProfileData}>Edit Profile</Button>
-            {isChangingProfile && <ChangeProfileData profile={profile} isChangingProfile={isChangingProfile} setIsChangingProfile={setIsChangingProfile}/>}
+            <Button ml='md' style={{width: 192}} variant={"gradient"} onClick={handleChangeProfileData}>Edit
+                Profile</Button>
+            {isChangingProfile && <ChangeProfileData profile={profile} isChangingProfile={isChangingProfile}
+                                                     setIsChangingProfile={setIsChangingProfile}/>}
             <JoinedOrg/>
         </>
     );
