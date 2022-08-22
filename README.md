@@ -1,3 +1,5 @@
+## 🚧🚧 This repo is under heavy development learning wise 🚧🚧
+
 # <img src="public/logo192.png" alt="logo" width="48"/> [uni](https://github.com/IAFahim)
 
 University club organizer, Mainly being developed for NSU-ACMSC with plan to expand it University level.
